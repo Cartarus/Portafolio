@@ -33,14 +33,14 @@ export const Navbar = () => {
         >
           <FaInstagram />
         </a>
-        <a 
+        {/* <a 
           href="https://twitter.com/cartarus28" 
           target="_blank" 
           rel="noopener noreferrer"
           className="hover:text-blue-500 transition-colors"
         >
           <FaSquareXTwitter />
-        </a>
+        </a> */}
       </div>
     </nav>
   );
