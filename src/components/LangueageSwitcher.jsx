@@ -25,7 +25,7 @@ const LanguageSwitcher = () => {
           <span className="ml-1">
             <img
               src="https://img.icons8.com/?size=512&id=t3NE3BsOAQwq&format=png"
-              className="w-5 h-5"
+              className="w-5 h-5 rounded-2xl hidden md:block "
               alt="English flag"
             />
           </span>
@@ -39,7 +39,7 @@ const LanguageSwitcher = () => {
           <span className="ml-1">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
-              className="w-5 h-5"
+              className="w-5 h-5 rounded-2xl hidden md:block "
               alt="Spanish flag"
             />
           </span>
