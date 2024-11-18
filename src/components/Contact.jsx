@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 
 export const Contact = () => {
+  const { t } = useTranslation(); 
+
   return (
     <div className="border-b border-neutral-700 pb-20">
       <motion.h2
@@ -10,7 +13,7 @@ export const Contact = () => {
         transition={{ duration: 0.5 }}
         className="my-10 text-center text-4xl"
       >
-        Get in Touch
+        {t("TITLES.GetInTouch")}
       </motion.h2>
       <div className="text-center tracking-tighter">
         <motion.p

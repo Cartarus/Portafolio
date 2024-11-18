@@ -1,17 +1,22 @@
-import { PROJECTS } from "../constants";
+import { useTranslation } from "react-i18next";
+// import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
 
 export const Projects = () => {
+  const { t } = useTranslation(); 
+  const projects = t("PROJECTS", { returnObjects: true }); // Recupera los datos como un objeto
+
+
   return (
     <div className="border-b  border-neutral-700 pb-4">
       <motion.h2 
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5 }}
-      className="my-20 text-center text-4xl">Projects</motion.h2>
+      className="my-20 text-center text-4xl">{t("TITLES.Projects")}</motion.h2>
       <div>
-        {PROJECTS.map((project, index) => (
+        {projects.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center gap-8">
             <motion.div 
             whileInView={{ opacity: 1, x: 0 }}

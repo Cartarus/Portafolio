@@ -3,6 +3,7 @@ import { FaDocker, FaNodeJs } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiJavascript, SiRedux } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -17,6 +18,7 @@ const iconVariants = (duration) => ({
   },
 });
 
+// eslint-disable-next-line react/prop-types
 const Tooltip = ({ children, label }) => {
   return (
     <div className="relative group">
@@ -29,6 +31,9 @@ const Tooltip = ({ children, label }) => {
 };
 
 export const Tecnologies = () => {
+
+  const { t } = useTranslation(); 
+
   return (
     <div className="border-b border-neutral-700 pb-24">
       <motion.h2
@@ -37,7 +42,7 @@ export const Tecnologies = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
-        Technologies
+        {t("TITLES.Technologies")}
       </motion.h2>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}

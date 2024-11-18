@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
 import aboutImg from "../assets/aboutCr.jpg";
-import { ABOUT_TEXT, ABOUT_TEXT2 } from "../constants";
+// import { ABOUT_TEXT, ABOUT_TEXT2 } from "../constants";
 import { motion } from "framer-motion";
 
 export const About = () => {
+
+  const { t } = useTranslation(); 
+
   return (
     <div className="border-b border-neutral-700 pb-4">
       <h2 className="my-20 text-center text-4xl">
-        About <span className="text-purple-400">Me</span>
+      {t("TITLES.About")} <span className="text-purple-400">{t("TITLES.Me")}</span>
       </h2>
       <div className="flex flex-wrap">
         <motion.div 
@@ -24,9 +28,9 @@ export const About = () => {
         transition={{duration:0.5}}
         className="w-full my-8 lg:w-1/2 text-justify ">
           <div className="flex flex-col justify-center lg:justify-start">
-            <p className=" max-w-2xl ">{ABOUT_TEXT}</p>
+            <p className=" max-w-2xl ">{t("ABOUT_TEXT")}</p>
             <br />
-            <p className=" max-w-2xl ">{ABOUT_TEXT2}</p>
+            <p className=" max-w-2xl ">{t("ABOUT_TEXT2")}</p>
           </div>
         </motion.div>
       </div>

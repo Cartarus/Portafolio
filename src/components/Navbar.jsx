@@ -1,6 +1,7 @@
 import logo from "../assets/CRLogo.png";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+// import { FaSquareXTwitter } from "react-icons/fa6";
+import LanguageSwitcher from "./LangueageSwitcher";
 
 export const Navbar = () => {
   return (
@@ -9,6 +10,7 @@ export const Navbar = () => {
         <img src={logo} alt="logo" className="mx-2 w-10" />
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+        <LanguageSwitcher/>
         <a 
           href="https://www.linkedin.com/in/cristian-camilo-guerrero-mendoza-462b76225/" 
           target="_blank" 
